@@ -88,3 +88,7 @@ A VPC is a private, isolated network. Nothing inside it can reach the internet b
 **Why must the NAT Gateway sit in a public subnet?**
 The NAT Gateway needs its own path to the internet so it can send traffic out for the private subnets. Only a public subnet has that path, because only the public route table points to the Internet Gateway. Private traffic goes to the NAT Gateway, then out through the Internet Gateway, and replies come back the same way. In a private subnet, the NAT Gateway would have no way out.
 >>>>>>> f5885a5 (feat: build AWS VPC network with Terraform)
+
+### Infrastructure Cleanup
+
+![Terraform Destroy](screenshots/12-terraform-destroy.png)
